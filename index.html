@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<title>Frontend Mentor | Product list with cart</title>
+	</head>
+	<body>
+		<div class="desserts">
+			<h1>Desserts</h1>
+			<div class="card">
+				<img src="./assets/images/image-baklava-mobile.jpg" alt="baklava" />
+				<button class="add-to-cart" value="baklava"><img src="./assets/images/icon-add-to-cart.svg" alt="add to cart icon" />Add to Cart</button>
+				<div class="card-text">
+					<div class="category">Baklava</div>
+					<div class="name">Pistachio Baklava</div>
+					<div class="price">$4.00</div>
+				</div>
+			</div>
+		</div>
+		<div class="cart">
+			<h2>Your Cart(0)</h2>
+			<img src="./assets/images/illustration-empty-cart.svg" alt="empty cart icon" />
+			<p>Your added items will appear here</p>
+		</div>
+		<div class="order-confirmed">
+			<div class="order-confirmed-icon"><img src="./assets/images/icon-order-confirmed.svg" alt="order confirmed icon" /></div>
+			<div class="order-confirmed-text">
+				<h1>Order Confirmed</h1>
+				<p>We hope you enjoy your food!</p>
+			</div>
+			<div class="ordered-items">
+				<div class="item-list"></div>
+				<div class="order-total">
+					<p>Order Total</p>
+					<h2>$0.00</h2>
+				</div>
+			</div>
+			<button class="start-new-order">Start New Order</button>
+		</div>
+		<script src="js/script.js"></script>
+	</body>
+</html>
