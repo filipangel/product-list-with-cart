@@ -73,6 +73,11 @@ body {
 	border-radius: 1rem;
 }
 
+.desserts .card.selected .card-image-and-button picture img,
+.desserts .card.selected .card-image-and-button picture source {
+	border: 2px solid var(--clr-red);
+}
+
 .desserts .card .card-image-and-button {
 	position: relative;
 }
@@ -92,6 +97,7 @@ body {
 
 .desserts .card .card-image-and-button .card-btn:hover {
 	transform: translateX(-50%) scale(1.05);
+	border: 1px solid var(--clr-red);
 }
 
 .desserts .card .card-image-and-button .card-btn .add-to-cart-btn {
@@ -156,7 +162,7 @@ body {
 	padding: 0.3rem;
 }
 
-.desserts .card .card-image-and-button .card-btn .minus-plus-btn p {
+.desserts .card .card-image-and-button .card-btn .minus-plus-btn .quantity-display {
 	font-family: "Red Hat Text", sans-serif;
 	font-size: 1.6rem;
 	font-weight: var(--fw-semi-normal);

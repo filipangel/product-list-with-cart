@@ -16,147 +16,76 @@
 			<div class="desserts-container">
 				<h1>Desserts</h1>
 				<div class="desserts">
-					<div class="card">
-						<div class="card-image-and-button">
-							<picture>
-								<source media="(min-width: 1024px)" srcset="./assets/images/image-baklava-desktop.jpg" />
-								<source media="(min-width: 768px)" srcset="./assets/images/image-baklava-tablet.jpg" />
-								<img src="./assets/images/image-baklava-mobile.jpg" alt="" />
-							</picture>
-							<div class="card-btn">
-								<button class="add-to-cart-btn" value="baklava">
-									<img src="./assets/images/icon-add-to-cart.svg" alt="add to cart icon" />
-									<p>Add to Cart</p>
-								</button>
-								<div class="minus-plus-btn hidden">
-									<button><img src="./assets/images/icon-decrement-quantity.svg" alt="" /></button>
-									<div class="quantity-display">1</div>
-									<button><img src="./assets/images/icon-increment-quantity.svg" alt="" /></button>
+					<template id="card-template">
+						<div class="card">
+							<div class="card-image-and-button">
+								<picture>
+									<source media="(min-width: 1024px)" srcset="" />
+									<source media="(min-width: 768px)" srcset="" />
+									<img src="" alt="" />
+								</picture>
+								<div class="card-btn">
+									<button class="add-to-cart-btn" onClick="handleAddToCart(event)">
+										<img src="./assets/images/icon-add-to-cart.svg" alt="add to cart icon" />
+										<p>Add to Cart</p>
+									</button>
+									<div class="minus-plus-btn hidden">
+										<button onClick="handleIncrementQuantity()"><img src="./assets/images/icon-decrement-quantity.svg" alt="" /></button>
+										<div class="quantity-display">1</div>
+										<button onClick="handleDecrementQuantity()"><img src="./assets/images/icon-increment-quantity.svg" alt="" /></button>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="card-text">
-							<div class="category">Baklava</div>
-							<div class="name">Pistachio Baklava</div>
-							<div class="price">$4.00</div>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-image-and-button">
-							<picture>
-								<source media="(min-width: 1024px)" srcset="./assets/images/image-baklava-desktop.jpg" />
-								<source media="(min-width: 768px)" srcset="./assets/images/image-baklava-tablet.jpg" />
-								<img src="./assets/images/image-baklava-mobile.jpg" alt="" />
-							</picture>
-							<div class="card-btn">
-								<button class="add-to-cart-btn" value="baklava">
-									<img src="./assets/images/icon-add-to-cart.svg" alt="add to cart icon" />
-									<p>Add to Cart</p>
-								</button>
-								<div class="minus-plus-btn hidden">
-									<button><img src="./assets/images/icon-decrement-quantity.svg" alt="" /></button>
-									<p>1</p>
-									<button><img src="./assets/images/icon-increment-quantity.svg" alt="" /></button>
-								</div>
+							<div class="card-text">
+								<div class="category"></div>
+								<div class="name"></div>
+								<div class="price">$</div>
 							</div>
 						</div>
-						<div class="card-text">
-							<div class="category">Baklava</div>
-							<div class="name">Pistachio Baklava</div>
-							<div class="price">$4.00</div>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-image-and-button">
-							<picture>
-								<source media="(min-width: 1024px)" srcset="./assets/images/image-baklava-desktop.jpg" />
-								<source media="(min-width: 768px)" srcset="./assets/images/image-baklava-tablet.jpg" />
-								<img src="./assets/images/image-baklava-mobile.jpg" alt="" />
-							</picture>
-							<div class="card-btn">
-								<button class="add-to-cart-btn" value="baklava">
-									<img src="./assets/images/icon-add-to-cart.svg" alt="add to cart icon" />
-									<p>Add to Cart</p>
-								</button>
-								<div class="minus-plus-btn hidden">
-									<button><img src="./assets/images/icon-decrement-quantity.svg" alt="" /></button>
-									<div class="quantity-display">1</div>
-									<button><img src="./assets/images/icon-increment-quantity.svg" alt="" /></button>
-								</div>
-							</div>
-						</div>
-						<div class="card-text">
-							<div class="category">Baklava</div>
-							<div class="name">Pistachio Baklava</div>
-							<div class="price">$4.00</div>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-image-and-button">
-							<picture>
-								<source media="(min-width: 1024px)" srcset="./assets/images/image-baklava-desktop.jpg" />
-								<source media="(min-width: 768px)" srcset="./assets/images/image-baklava-tablet.jpg" />
-								<img src="./assets/images/image-baklava-mobile.jpg" alt="" />
-							</picture>
-							<div class="card-btn">
-								<button class="add-to-cart-btn" value="baklava">
-									<img src="./assets/images/icon-add-to-cart.svg" alt="add to cart icon" />
-									<p>Add to Cart</p>
-								</button>
-								<div class="minus-plus-btn hidden">
-									<button><img src="./assets/images/icon-decrement-quantity.svg" alt="" /></button>
-									<div class="quantity-display">1</div>
-									<button><img src="./assets/images/icon-increment-quantity.svg" alt="" /></button>
-								</div>
-							</div>
-						</div>
-						<div class="card-text">
-							<div class="category">Baklava</div>
-							<div class="name">Pistachio Baklava</div>
-							<div class="price">$4.00</div>
-						</div>
-					</div>
+					</template>
 				</div>
 			</div>
 			<div class="cart">
-				<h2>Your Cart (1)</h2>
+				<h2>Your Cart (0)</h2>
 				<div class="cart-content">
-					<div class="empty-cart hidden">
+					<div class="empty-cart">
 						<img src="./assets/images/illustration-empty-cart.svg" alt="empty cart icon" />
 						<p>Your added items will appear here</p>
 					</div>
-					<div class="cart-items">
+					<div class="cart-items hidden">
 						<ul class="cart-item-list">
-							<li class="cart-item">
-								<div class="cart-item-text">
-									<p class="name">Classic Tiramisu</p>
-									<div class="lower-row">
-										<div class="quantity">
-											<p><span>1</span>x</p>
-										</div>
-										<div class="price-per">
-											<p>@$<span>5.50</span></p>
-										</div>
+							<template id="cart-item-template">
+								<li class="cart-item">
+									<div class="cart-item-text">
+										<p class="name"></p>
+										<div class="lower-row">
+											<div class="quantity">
+												<p><span></span>x</p>
+											</div>
+											<div class="price-per">
+												<p>@$<span></span></p>
+											</div>
 
-										<div class="price-total">
-											<p>$<span>5.50</span></p>
+											<div class="price-total">
+												<p>$<span></span></p>
+											</div>
 										</div>
 									</div>
-								</div>
 
-								<button class="remove-btn"><img src="./assets/images/icon-remove-item.svg" alt="" /></button>
-							</li>
+									<button class="remove-btn" onClick="handleRemoveCartItem()"><img src="./assets/images/icon-remove-item.svg" alt="" /></button>
+								</li>
+							</template>
 						</ul>
-						<div class="cart-footer">
+						<div class="cart-footer hidden">
 							<div class="order-total">
 								<p>Order Total</p>
-								<div class="total">$<span>5.50</span></div>
+								<div class="total">$<span></span></div>
 							</div>
 							<div class="carbon-neutral">
 								<img src="./assets/images/icon-carbon-neutral.svg" alt="" />
 								<p>This is a <span>carbon-neutral</span> delivery</p>
 							</div>
-							<button class="confirm-order-btn">Confirm Order</button>
+							<button class="confirm-order-btn" onClick="handleConfirmOrder()">Confirm Order</button>
 						</div>
 					</div>
 				</div>
@@ -171,26 +100,28 @@
 				</div>
 				<div class="ordered-items">
 					<ul class="item-list">
-						<li class="order-item">
-							<div class="left-part">
-								<img src="./assets/images/image-baklava-thumbnail.jpg" alt="" />
-								<div class="order-item-text">
-									<p class="name">Pistachio Baklava</p>
-									<div class="lower-row">
-										<div class="quantity">
-											<p><span>1</span>x</p>
-										</div>
-										<div class="price-per">
-											<p>@$<span>5.50</span></p>
+						<template id="order-item-template">
+							<li class="order-item">
+								<div class="left-part">
+									<img src="" alt="" />
+									<div class="order-item-text">
+										<p class="name"></p>
+										<div class="lower-row">
+											<div class="quantity">
+												<p><span>1</span>x</p>
+											</div>
+											<div class="price-per">
+												<p>@$<span></span></p>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
 
-							<div class="price-total">
-								<p>$<span>5.50</span></p>
-							</div>
-						</li>
+								<div class="price-total">
+									<p>$<span></span></p>
+								</div>
+							</li>
+						</template>
 					</ul>
 					<div class="order-total">
 						<p>Order Total</p>
@@ -199,8 +130,9 @@
 				</div>
 			</div>
 
-			<button class="start-new-order">Start New Order</button>
+			<button class="start-new-order" onClick="handleStartNewOrder()">Start New Order</button>
 		</div>
+
 		<script src="js/script.js"></script>
 	</body>
 </html>
