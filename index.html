@@ -11,6 +11,7 @@
 		<title>Frontend Mentor | Product list with cart</title>
 	</head>
 	<body>
+		<div class="overlay"></div>
 		<div class="container">
 			<div class="desserts-container">
 				<h1>Desserts</h1>
@@ -198,21 +199,45 @@
 					</div>
 				</div>
 			</div>
-			<div class="order-confirmed hidden">
+		</div>
+		<div class="order-confirmed">
+			<div class="order-confirmed-content">
 				<div class="order-confirmed-icon"><img src="./assets/images/icon-order-confirmed.svg" alt="order confirmed icon" /></div>
 				<div class="order-confirmed-text">
 					<h1>Order Confirmed</h1>
 					<p>We hope you enjoy your food!</p>
 				</div>
 				<div class="ordered-items">
-					<ul class="item-list"></ul>
+					<ul class="item-list">
+						<li class="order-item">
+							<div class="left-part">
+								<img src="./assets/images/image-baklava-thumbnail.jpg" alt="" />
+								<div class="order-item-text">
+									<p class="name">Pistachio Baklava</p>
+									<div class="lower-row">
+										<div class="quantity">
+											<p><span>1</span>x</p>
+										</div>
+										<div class="price-per">
+											<p>@$<span>5.50</span></p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="price-total">
+								<p>$<span>5.50</span></p>
+							</div>
+						</li>
+					</ul>
 					<div class="order-total">
 						<p>Order Total</p>
-						<h2>$0.00</h2>
+						<h2>$<span>5.50</span></h2>
 					</div>
 				</div>
-				<button class="start-new-order">Start New Order</button>
 			</div>
+
+			<button class="start-new-order">Start New Order</button>
 		</div>
 		<script src="js/script.js"></script>
 	</body>
