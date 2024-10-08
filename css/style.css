@@ -49,24 +49,135 @@ body {
 }
 
 .desserts-container h1 {
-	color: var(--clr-red);
+	color: var(--clr-rose-900);
+	font-size: 4rem;
 }
+
 .desserts {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	gap: 2rem;
 }
 
 /* DESSERT CARDS */
 
 .desserts .card {
 	width: auto;
+	min-width: 25rem;
 }
 
-.desserts .card picture img,
-.desserts .card picture source {
+.desserts .card .card-image-and-button picture img,
+.desserts .card .card-image-and-button picture source {
 	width: 100%;
 	border-radius: 1rem;
+}
+
+.desserts .card .card-image-and-button {
+	position: relative;
+}
+
+.desserts .card .card-image-and-button .card-btn {
+	border-radius: 3rem;
+	width: 16rem;
+	height: 4rem;
+	background-color: white;
+	border: 1px solid var(--clr-rose-400);
+	overflow: hidden;
+	position: absolute;
+	bottom: -1.3rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.desserts .card .card-image-and-button .card-btn .add-to-cart-btn {
+	background-color: inherit;
+	border: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.desserts .card .card-image-and-button .card-btn .add-to-cart-btn img {
+	width: 2rem;
+}
+
+.desserts .card .card-image-and-button .card-btn .add-to-cart-btn p {
+	font-family: "Red Hat Text", sans-serif;
+	font-size: 1.4rem;
+	font-weight: var(--fw-semi-bold);
+	color: var(--clr-rose-900);
+	margin-left: 0.7rem;
+}
+
+.desserts .card .card-image-and-button .card-btn .minus-plus-btn {
+	display: flex;
+	align-items: center;
+	border: 0;
+	background-color: var(--clr-red);
+	height: 100%;
+	width: 100%;
+}
+
+.desserts .card .card-image-and-button .card-btn .minus-plus-btn button {
+	cursor: pointer;
+	border: 0;
+	background: none;
+	height: 100%;
+	width: 50%;
+	display: flex;
+	align-items: center;
+}
+
+.desserts .card .card-image-and-button .card-btn .minus-plus-btn button:nth-of-type(1) {
+	justify-content: flex-start;
+}
+
+.desserts .card .card-image-and-button .card-btn .minus-plus-btn button:nth-of-type(2) {
+	justify-content: flex-end;
+}
+
+.desserts .card .card-image-and-button .card-btn .minus-plus-btn img {
+	margin-right: 1rem;
+	border: 1px solid white;
+	background: none;
+	border-radius: 50%;
+	width: 1.8rem;
+	height: 1.8rem;
+	margin-left: 1rem;
+	padding: 0.3rem;
+}
+
+.desserts .card .card-image-and-button .card-btn .minus-plus-btn p {
+	font-family: "Red Hat Text", sans-serif;
+	font-size: 1.6rem;
+	font-weight: var(--fw-semi-normal);
+	color: white;
+}
+
+.desserts .card .card-text {
+	margin-top: 3rem;
+}
+
+.desserts .card .card-text .category {
+	font-weight: var(--fw-normal);
+	color: var(--clr-rose-500);
+	opacity: 0.9;
+	font-size: 1.5rem;
+}
+.desserts .card .card-text .name {
+	font-weight: var(--fw-bold);
+	color: var(--clr-rose-900);
+	opacity: 0.9;
+	margin-top: 0.5rem;
+}
+.desserts .card .card-text .price {
+	font-weight: var(--fw-semi-bold);
+	color: var(--clr-red);
+	opacity: 0.9;
+	margin-top: 0.5rem;
 }
 
 /* CART */
@@ -75,11 +186,12 @@ body {
 	background-color: white;
 	width: 100%;
 	border-radius: 1rem;
+	min-width: 25rem;
+	margin-top: 3rem;
 }
 
 .cart h2 {
 	color: var(--clr-red);
-	margin-bottom: 2rem;
 }
 
 .cart .cart-content .empty-cart {
@@ -87,6 +199,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-top: 2rem;
 }
 
 .cart .cart-content .empty-cart p {
@@ -100,6 +213,127 @@ body {
 	width: 14rem;
 }
 
+.cart .cart-content .cart-items .cart-items {
+	display: flex;
+	flex-direction: column;
+}
+
+.cart .cart-content .cart-items .cart-item-list {
+	list-style: none;
+}
+
+.cart .cart-content .cart-items .cart-item-list li {
+	border-bottom: 1px solid var(--clr-rose-100);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+.cart .cart-content .cart-items .cart-item-list li .cart-item-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.cart .cart-content .cart-items .cart-item-list li .cart-item-text .lower-row {
+	display: flex;
+}
+
+.cart .cart-content .cart-items .cart-item-list li .cart-item-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.cart .cart-content .cart-items .cart-item-list li .cart-item-text .name {
+	color: var(--clr-rose-900);
+	font-weight: var(--fw-bold);
+	margin-bottom: 0.5rem;
+}
+
+.cart .cart-content .cart-items .cart-item-list li .cart-item-text .quantity {
+	color: var(--clr-red);
+	font-weight: var(--fw-bold);
+	margin-right: 2.5rem;
+}
+
+.cart .cart-content .cart-items .cart-item-list li .cart-item-text .price-per {
+	color: var(--clr-rose-500);
+	margin-right: 1rem;
+}
+
+.cart .cart-content .cart-items .cart-item-list li .cart-item-text .price-total {
+	color: var(--clr-rose-500);
+	font-weight: var(--fw-semi-bold);
+}
+
+.cart .cart-content .cart-items .cart-item-list li .remove-btn {
+	width: 1.7rem;
+	height: 1.7rem;
+	border: solid 1px var(--clr-rose-300);
+	border-radius: 50%;
+	background: none;
+	padding: 0.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.cart .cart-content .cart-items .cart-item-list li .remove-btn img {
+	height: 100%;
+	width: 100%;
+}
+
+.cart .cart-content .cart-items .cart-footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.cart .cart-content .cart-items .cart-footer .order-total {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 2rem 0;
+}
+
+.cart .cart-content .cart-items .cart-footer .order-total .total {
+	font-weight: var(--fw-bold);
+	font-size: 2.5rem;
+}
+
+.cart .cart-content .cart-items .cart-footer .carbon-neutral {
+	background-color: var(--clr-rose-50);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 1.5rem 0;
+	border-radius: 1rem;
+	margin-bottom: 2rem;
+}
+
+.cart .cart-content .cart-items .cart-footer .carbon-neutral p {
+	margin-left: 1rem;
+}
+
+.cart .cart-content .cart-items .cart-footer .carbon-neutral span {
+	font-weight: var(--fw-semi-bold);
+}
+
+.cart .cart-content .cart-items .cart-footer .confirm-order-btn {
+	background-color: var(--clr-red);
+	width: 100%;
+	border-radius: 3rem;
+	color: white;
+	border: 0;
+	padding: 1.6rem 0;
+	font-size: 1.8rem;
+	font-family: "Red Hat Text", sans-serif;
+}
+
 /* ORDER CONFIRMED */
 
 .hidden {
@@ -108,6 +342,7 @@ body {
 
 @media (min-width: 480px) {
 	.desserts {
+		gap: 2rem;
 	}
 
 	.desserts .card {
@@ -142,6 +377,7 @@ body {
 	}
 
 	.cart {
+		width: 100%;
 		max-width: 94rem;
 	}
 }
@@ -177,5 +413,8 @@ body {
 	}
 	.desserts {
 		max-width: 79rem;
+	}
+	.desserts .card {
+		margin-bottom: 1rem;
 	}
 }
