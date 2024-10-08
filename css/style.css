@@ -253,7 +253,7 @@ body {
 .cart .cart-content .cart-items .cart-item-list li .cart-item-text .name {
 	color: var(--clr-rose-900);
 	font-weight: var(--fw-bold);
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
 }
 
 .cart .cart-content .cart-items .cart-item-list li .cart-item-text .quantity {
@@ -339,7 +339,7 @@ body {
 	border-radius: 3rem;
 	color: white;
 	border: 0;
-	padding: 1.6rem 0;
+	padding: 1.3rem 0;
 	font-size: 1.8rem;
 	font-family: "Red Hat Text", sans-serif;
 	cursor: pointer;

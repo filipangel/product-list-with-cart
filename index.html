@@ -11,7 +11,7 @@
 		<title>Frontend Mentor | Product list with cart</title>
 	</head>
 	<body>
-		<div class="overlay"></div>
+		<div class="overlay hidden"></div>
 		<div class="container">
 			<div class="desserts-container">
 				<h1>Desserts</h1>
@@ -49,11 +49,11 @@
 								<img src="./assets/images/image-baklava-mobile.jpg" alt="" />
 							</picture>
 							<div class="card-btn">
-								<button class="add-to-cart-btn hidden" value="baklava">
+								<button class="add-to-cart-btn" value="baklava">
 									<img src="./assets/images/icon-add-to-cart.svg" alt="add to cart icon" />
 									<p>Add to Cart</p>
 								</button>
-								<div class="minus-plus-btn">
+								<div class="minus-plus-btn hidden">
 									<button><img src="./assets/images/icon-decrement-quantity.svg" alt="" /></button>
 									<p>1</p>
 									<button><img src="./assets/images/icon-increment-quantity.svg" alt="" /></button>
@@ -146,44 +146,6 @@
 
 								<button class="remove-btn"><img src="./assets/images/icon-remove-item.svg" alt="" /></button>
 							</li>
-							<li class="cart-item">
-								<div class="cart-item-text">
-									<p class="name">Classic Tiramisu</p>
-									<div class="lower-row">
-										<div class="quantity">
-											<p><span>1</span>x</p>
-										</div>
-										<div class="price-per">
-											<p>@$<span>5.50</span></p>
-										</div>
-
-										<div class="price-total">
-											<p>$<span>5.50</span></p>
-										</div>
-									</div>
-								</div>
-
-								<button class="remove-btn"><img src="./assets/images/icon-remove-item.svg" alt="" /></button>
-							</li>
-							<li class="cart-item">
-								<div class="cart-item-text">
-									<p class="name">Classic Tiramisu</p>
-									<div class="lower-row">
-										<div class="quantity">
-											<p><span>1</span>x</p>
-										</div>
-										<div class="price-per">
-											<p>@$<span>5.50</span></p>
-										</div>
-
-										<div class="price-total">
-											<p>$<span>5.50</span></p>
-										</div>
-									</div>
-								</div>
-
-								<button class="remove-btn"><img src="./assets/images/icon-remove-item.svg" alt="" /></button>
-							</li>
 						</ul>
 						<div class="cart-footer">
 							<div class="order-total">
@@ -200,7 +162,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="order-confirmed">
+		<div class="order-confirmed hidden">
 			<div class="order-confirmed-content">
 				<div class="order-confirmed-icon"><img src="./assets/images/icon-order-confirmed.svg" alt="order confirmed icon" /></div>
 				<div class="order-confirmed-text">
