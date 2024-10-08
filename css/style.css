@@ -64,7 +64,6 @@ body {
 .desserts .card {
 	width: auto;
 	min-width: 25rem;
-	box-sizing: content-box;
 }
 
 .desserts .card .card-image-and-button picture img,
@@ -570,7 +569,7 @@ body {
 	}
 }
 
-@media (min-width: 1340px) {
+@media (min-width: 1357px) {
 	.container {
 		padding: 7rem;
 	}

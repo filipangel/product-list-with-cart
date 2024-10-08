@@ -98,6 +98,7 @@ function handleConfirmOrder(event) {
 		orderItemList.append(orderItemClone);
 	}
 	orderConfirmed.querySelector(".order-total span").textContent = cartFooter.querySelector(".total span").textContent;
+	window.scrollTo(0, 0);
 }
 
 function handleStartNewOrder(event) {
@@ -106,6 +107,10 @@ function handleStartNewOrder(event) {
 	const items = cartItemList.querySelectorAll(".cart-item");
 	for (const item of items) {
 		removeItemFromCart(item);
+	}
+	const orderItems = orderConfirmed.querySelectorAll(".order-item");
+	for (const item of orderItems) {
+		orderConfirmed.querySelector(".item-list").removeChild(item);
 	}
 	updateCart();
 }
@@ -118,10 +123,13 @@ function updateCart() {
 	}
 	const items = cartItemList.querySelectorAll(".cart-item");
 	var sum = 0.0;
+	var count = 0;
 	for (const item of items) {
 		if (parseInt(item.querySelector(".quantity span").textContent) < 1) {
 			removeItemFromCart(item);
 		}
+
+		count += parseInt(item.querySelector(".quantity span").textContent);
 
 		const productSum = parseFloat(item.querySelector(".price-per span").textContent) * parseFloat(item.querySelector(".quantity span").textContent);
 		item.querySelector(".price-total span").textContent = productSum.toFixed(2);
@@ -135,6 +143,7 @@ function updateCart() {
 	}
 
 	cartFooter.querySelector(".total span").textContent = sum.toFixed(2);
+	cart.querySelector(".cart-counter span").textContent = count;
 }
 
 function removeItemFromCart(item) {
