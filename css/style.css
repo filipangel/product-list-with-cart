@@ -61,21 +61,16 @@ body {
 }
 
 /* DESSERT CARDS */
-
 .desserts .card {
 	width: auto;
 	min-width: 25rem;
+	box-sizing: content-box;
 }
 
 .desserts .card .card-image-and-button picture img,
 .desserts .card .card-image-and-button picture source {
 	width: 100%;
 	border-radius: 1rem;
-}
-
-.desserts .card.selected .card-image-and-button picture img,
-.desserts .card.selected .card-image-and-button picture source {
-	border: 2px solid var(--clr-red);
 }
 
 .desserts .card .card-image-and-button {
@@ -93,6 +88,7 @@ body {
 	bottom: -1.3rem;
 	left: 50%;
 	transform: translateX(-50%);
+	z-index: 5;
 }
 
 .desserts .card .card-image-and-button .card-btn:hover {
@@ -408,6 +404,7 @@ body {
 	align-items: center;
 	padding-bottom: 2rem;
 	border-bottom: 1px solid var(--clr-rose-100);
+	padding-top: 2rem;
 }
 
 .order-confirmed .ordered-items .item-list .order-item .left-part {
