@@ -58,4 +58,4 @@ I intend to reuse this project as a basis for an actual webshop with items loade
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/filipangel)
+- Frontend Mentor - [@filipangel](https://www.frontendmentor.io/profile/filipangel)
